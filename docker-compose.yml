@@ -4,7 +4,6 @@ services:
     image: nginx:latest
     depends_on:
       - php
-      - db
     volumes:
       - ./app/public:/var/www/public
       - ./docker/nginx/config:/etc/nginx
