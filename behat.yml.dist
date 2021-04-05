@@ -1,0 +1,14 @@
+default:
+  suites:
+    default:
+      paths:    [ "%paths.base%/features/" ]
+      contexts:
+        - Imbo\BehatApiExtension\Context\ApiContext
+
+  extensions:
+        FriendsOfBehat\SymfonyExtension:
+            kernel:
+                environment: test
+        Imbo\BehatApiExtension:
+            apiClient:
+                base_uri: http://nginx
